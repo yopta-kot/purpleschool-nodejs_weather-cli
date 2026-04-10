@@ -1,6 +1,6 @@
 {
   "name": "@yopta-kot/weather-cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "CLI for getting weather",
   "keywords": [
     "cli",
@@ -8,11 +8,21 @@
   ],
   "license": "ISC",
   "author": "Maksim Tkachou",
-  "type": "commonjs",
-  "main": "index.js",
-  "bin": "./index.js",
+  "type": "module",
+  "main": "weather.js",
+  "bin": {
+    "weather": "weather.js"
+  },
+  "repository": "",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node weather.js",
+    "start:dev": "TOKEN=[API_TOKEN] CITY=[CITY] node weather.js"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "dedent-js": "^1.0.1"
   }
 }

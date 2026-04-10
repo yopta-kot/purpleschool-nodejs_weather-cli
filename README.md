@@ -1,0 +1,1 @@
+# @yopta-kot/weather-cli

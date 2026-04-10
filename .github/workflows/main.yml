@@ -1,0 +1,20 @@
+name: publish as npm package
+on:
+  workflow_dispatch:
+jobs:
+  building:
+    name: publish
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 24.x
+          cache: "npm"
+      - name: Install npm modules
+        run: npm ci
+      - name: Publish
+        run: npm run make-publish
+        env:
+          GIT_TOKEN: ${{ secrets.TOKEN }}

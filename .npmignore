@@ -1,0 +1,11 @@
+# source
+.github
+package-lock.json
+
+# misc
+npm-debug.log
+.DS_Store
+
+# IDE
+/.idea
+/.vscode
