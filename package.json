@@ -13,7 +13,7 @@
   "bin": {
     "weather": "weather.js"
   },
-  "repository": "",
+  "repository": "https://github.com/yopta-kot/purpleschool-nodejs_weather-cli",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },

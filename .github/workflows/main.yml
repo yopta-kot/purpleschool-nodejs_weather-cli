@@ -15,6 +15,6 @@ jobs:
       - name: Install npm modules
         run: npm ci
       - name: Publish
-        run: npm run make-publish
+        run: npm publish
         env:
           GIT_TOKEN: ${{ secrets.TOKEN }}
